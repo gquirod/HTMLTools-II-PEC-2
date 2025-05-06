@@ -34,8 +34,12 @@
   }
 
   &__control--check {
-    padding-inline: 4dvw;
     padding-bottom: 3dvh;
+  }
+
+  &__control--check-input {
+    margin-left: 0.5dvw;
+    margin-right: 0.8dvw;
   }
 
   &__button {
@@ -87,10 +91,6 @@
 
       &__control {
         padding-inline: 2cqw;
-      }
-
-      &__control--check {
-        padding-inline: 4cqw;
       }
 
       &__button {

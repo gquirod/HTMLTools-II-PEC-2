@@ -15,15 +15,15 @@
           <legend class="custom-form__legend">Crea tu cuenta</legend>
           <div class="custom-form__control">
             <label for="name" class="form-label">Nombre</label>
-            <input type="text" class="form-control" id="name" required />
+            <input type="text" class="form-control" id="name" name="name" required />
           </div>
           <div class="custom-form__control">
             <label for="surname" class="form-label">Apellidos</label>
-            <input type="text" class="form-control" id="surname" required />
+            <input type="text" class="form-control" id="surname" name="surname" required />
           </div>
           <div class="custom-form__control">
             <label for="email" class="form-label">Correo</label>
-            <input type="email" class="form-control" id="email" required />
+            <input type="email" class="form-control" id="email"  name="email" required/>
           </div>
           <div class="custom-form__control">
             <label for="user-password" class="form-label">Contraseña</label>
@@ -31,13 +31,15 @@
               type="password"
               class="form-control"
               id="user-password"
+              name="password"
               required
             />
           </div>
-          <div class="custom-form__control--check form-check">
+          <div class="custom-form__control custom-form__control--check form-check">
             <input
               type="checkbox"
-              class="form-check-input"
+              class="form-check-input custom-form__control--check-input"
+              name="newsletter"
               id="newsletter-check"
             />
             <label class="form-check-label" for="newsletter-check"
