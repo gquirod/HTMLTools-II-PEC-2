@@ -20,7 +20,7 @@
     object-fit: cover;
     height: 450px;
     width: 100%;
-    object-position: top;
+    object-position: 20% ;
     overflow: hidden;
 
     @media (min-width: 990px) {
@@ -98,7 +98,6 @@
   
   /* stylelint-disable */
   :is(.article__text-wrapper) :is(.article__container-img) .article__image {
-    object-fit: cover;
     height: 400px;
     object-position: center;
     overflow: hidden;
