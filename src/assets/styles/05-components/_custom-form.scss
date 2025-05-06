@@ -49,11 +49,11 @@
     margin: 4dvw;
     font-weight: 600;
     background: hsl(from #7ca7f5 h calc(s + 0%) calc(l + 20%));
-    color: hsl(from #000000 h s l);
+    color: converToHsl(#000000);
   }
 
   &__button:hover {
-    background: hsl(from #7ca7f5 h s l);
+    background: converToHsl(#7ca7f5);
     color: hsl(from #000000 h s calc(l + 100%));
   }
 

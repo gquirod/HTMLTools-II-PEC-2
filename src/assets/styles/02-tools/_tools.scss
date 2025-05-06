@@ -7,5 +7,17 @@
 \*------------------------------------*/
 
 @mixin boxShadowStyle($color: $web-detail) {
-  box-shadow: 2px 2px 5px 5px rgba($color, .25);
+  box-shadow: 2px 2px 5px 5px converToHsl($color, .25);
+};
+
+
+
+
+
+/*------------------------------------*\
+  #FUNCTIONS
+\*------------------------------------*/
+
+@function converToHsl($color, $multiplier: 1) {
+  @return hsl(from $color h s l / $multiplier)
 };
