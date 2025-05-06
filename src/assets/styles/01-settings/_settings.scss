@@ -1,0 +1,93 @@
+/*------------------------------------*\
+  #SETTINGS
+\*------------------------------------*/
+
+/*------------------------------------*\
+  #COLORS
+\*------------------------------------*/
+
+@use "sass:color";
+
+
+$primary-color: #7ca7f5;
+
+$primary-color-faded: color.scale($primary-color, $alpha: -70%);
+
+$primary-color-font: #5178c2;
+
+$theme-colors: (
+  "primary": $primary-color,
+);
+
+
+
+
+
+/*------------------------------------*\
+  #FONTS
+\*------------------------------------*/
+
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap");
+
+
+$font-family-comfortaa: "Comfortaa", regular, sans-serif;
+
+
+
+
+
+/*---------------------------------------*\
+  #BOOTSTRAP-COMPONENTS-VARIABLE-CHANGES
+\*---------------------------------------*/
+
+// nav bar changes
+$navbar-light-toggler-border-color: $primary-color;
+
+$navbar-light-color: $primary-color-font;
+
+$nav-link-color: $primary-color-font;
+
+$navbar-toggler-focus-width: 2px;
+
+$navbar-nav-link-padding-x: 1rem;
+
+$nav-link-padding-x: 0.5rem;
+
+
+// card changes
+$card-border-width: 0;
+
+
+// list changes
+$list-group-border-width: 0;
+
+$list-group-border-radius: 0;
+
+
+// modal changes
+$modal-transition: transform 0.1s ease-in;
+
+$modal-fade-transform: translate(0px, -500px);
+
+
+
+
+
+/*------------------------------------*\
+  #MEDIA-QUERIES
+\*------------------------------------*/
+
+// size for small phone device
+$maxSMobileWidth: 567px;
+
+// size for bigger phone device
+$maxLMobileWidth: 768px;
+
+// size for tablet device
+$maxTabletWidth: 900px;
+
+// size for desktop device
+$maxMSDesktopWidth: 1280px;
+
+// size for bigger desktop device
+$maxLMDesktopWidth: 1400px;

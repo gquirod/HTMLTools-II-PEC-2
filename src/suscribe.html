@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" type="text/css" href="./assets/styles/main.scss" />
+    <!-- do not remove this line! -->
+    <title>UOC Boilerplate</title>
+  </head>
+  <body>
+    <include src="./views/header.html"></include>
+    <section class="py-5 border-top border-primary">
+      <form class="custom-form" name="suscribe" netlify>
+        <div class="custom-form__container">
+          <legend class="custom-form__legend">Crea tu cuenta</legend>
+          <div class="custom-form__control">
+            <label for="name" class="form-label">Nombre</label>
+            <input type="text" class="form-control" id="name" required />
+          </div>
+          <div class="custom-form__control">
+            <label for="surname" class="form-label">Apellidos</label>
+            <input type="text" class="form-control" id="surname" required />
+          </div>
+          <div class="custom-form__control">
+            <label for="email" class="form-label">Correo</label>
+            <input type="email" class="form-control" id="email" required />
+          </div>
+          <div class="custom-form__control">
+            <label for="user-password" class="form-label">Contraseña</label>
+            <input
+              type="password"
+              class="form-control"
+              id="user-password"
+              required
+            />
+          </div>
+          <div class="custom-form__control--check form-check">
+            <input
+              type="checkbox"
+              class="form-check-input"
+              id="newsletter-check"
+            />
+            <label class="form-check-label" for="newsletter-check"
+              >Apúntame a la newsletter</label
+            >
+          </div>
+          <div class="d-flex justify-content-center">
+            <button type="submit" class="btn custom-form__button">
+              Crear cuenta
+            </button>
+          </div>
+        </div>
+      </form>
+    </section>
+    <include src="./views/footer.html"></include>
+    <script type="module" src="./assets/scripts/main.js"></script>
+    <!-- do not remove this line! -->
+  </body>
+</html>

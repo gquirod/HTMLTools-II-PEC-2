@@ -1,0 +1,54 @@
+/*------------------------------------*\
+  #CARDS-GRID
+\*------------------------------------*/
+
+.cards-grid {
+  color: $primary-color-font;
+
+  &__block {
+    flex: 1 1 100%;
+
+    @media (min-width: $maxTabletWidth) {
+      flex: 1 1 40%;
+    }
+
+    @media (min-width: $maxMSDesktopWidth) {
+      flex: 1 1 25%;
+    }
+
+  }
+
+  &__block-info {
+    color: $primary-color-font;
+  }
+
+}
+
+
+
+
+
+@supports (container-type: inline-size) {
+
+  .cards-grid {
+    container-type: inline-size;
+    container-name: card-grid;
+
+    @container card-grid (min-width: 708px) {
+      
+      &__block {
+        flex: 1 1 40%;
+      }
+    }
+
+    @container card-grid (min-width: 1088px) {
+
+      &__block {
+        flex: 1 1 25%;
+      }
+
+    }
+
+  }
+
+}

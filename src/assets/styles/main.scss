@@ -4,10 +4,16 @@
  */
 
 /**
- * Import variables
+ * Import variables, mixins, generic templates and elements.
  */
 
-@import "variables";
+@import "01-settings/settings";
+
+@import "02-tools/tools";
+
+@import "03-generic/generic";
+
+@import "04-elements/elements";
 
 /**
  * Import npm dependencies
@@ -17,13 +23,53 @@
 
 // @import "some-node-module";
 // @import "@some-company/some-node-module";
+@import "npm:@fortawesome/fontawesome-free/css/all.css";
+@import "npm:imagehover.css/css/imagehover.min.css";
 
 /**
  * Import layouts
  * It's a best practice to use a different partial for each page
  */
 
-@import "layouts/home";
+@layer bootstrap {
+  @import "bootstrap/scss/functions";
+  @import "bootstrap/scss/variables";
+  @import "bootstrap/scss/variables-dark";
+  @import "bootstrap/scss/maps";
+  @import "bootstrap/scss/mixins";
+  @import "bootstrap/scss/utilities";
+
+  @import "bootstrap/scss/root";
+  @import "bootstrap/scss/reboot";
+  @import "bootstrap/scss/type";
+  @import "bootstrap/scss/images";
+  @import "bootstrap/scss/containers";
+  @import "bootstrap/scss/grid";
+  @import "bootstrap/scss/tables";
+  @import "bootstrap/scss/forms";
+  @import "bootstrap/scss/buttons";
+  @import "bootstrap/scss/transitions";
+  @import "bootstrap/scss/dropdown";
+  @import "bootstrap/scss/nav";
+  @import "bootstrap/scss/navbar";
+  @import "bootstrap/scss/card";
+  @import "bootstrap/scss/list-group";
+  @import "bootstrap/scss/close";
+  @import "bootstrap/scss/modal";
+
+  @import "bootstrap/scss/helpers";
+
+  @import "bootstrap/scss/utilities/api";
+}
+
+@layer components {
+  @import "05-components/cards-grid";
+  @import "05-components/main-page";
+  @import "05-components/article";
+  @import "05-components/footer-grid";
+  @import "05-components/custom-form";
+}
+
 
 /**
  * Do NOT include anything else in this file!

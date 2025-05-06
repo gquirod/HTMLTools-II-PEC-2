@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" type="text/css" href="./assets/styles/main.scss" />
+    <!-- do not remove this line! -->
+    <title>UOC Boilerplate</title>
+  </head>
+  <body>
+    <include src="./views/header.html"></include>
+    <section class="article border-top border-primary">
+      <figure class="imghvr-blur article__container-img">
+        <img class="article__image" src="assets/images/front-eco-1.jpg" alt="Imagen de una mano sosteniendo una hoja" />
+        <figcaption class="article__text-wrapper d-flex justify-content-center align-items-center">
+          <p class="h1">Conoce nuestro proyecto</p>
+        </figcaption>
+      </figure>
+      <div class="mx-1 mx-xl-5 px-4 px-lg-5">
+        <div class="article__text-wrapper mx-1 mx-xl-5 px-4 px-lg-5">
+          <div class="article__text-container my-5 mx-1 mx-xl-5 px-4 px-lg-5">
+            <p class="article__text-container--two-column">
+              Desde EcoRetro el objetivo es crecer a la par, sin dejar a nada ni
+              nadie por el camino. Crecer de forma consciente, crecer juntos.
+            </p>
+            <p class="article__text-container--two-column">
+              Creemos en la posibilidad de un futuro más estable y consciente en
+              el crecimiento económico no suponga un deterioro medioambiental ni
+              de nuestros barrios. Por ello establecemos ciertas bases que poner
+              en práctia en nuestras charlas y talleres.
+            </p>
+          </div>
+          <ol class="article__list-container list-group mx-1 mx-xl-5 px-4 px-lg-5 mt-3">
+            <li class="list-group-item d-flex justify-content-between align-items-start border-top border-primary article__list-container-item article__list-container-item--numbered pt-4">
+              <div class="ms-2 me-auto">
+                <div class="fw-bold mb-2">Coordinación</div>
+                <p>
+                  Necesidad de aprender de forma transversal las implicaciones
+                  de todos los ámbitos relacionados dentro del flujo de este
+                  tipo de proyectos, conociendo así con qué límites empezamos a
+                  construir un futuro mejor.
+                </p>
+              </div>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-start article__list-container-item article__list-container-item--numbered">
+              <div class="ms-2 me-auto">
+                <div class="fw-bold mb-2">Organización</div>
+                <p>
+                  Entendidos los límites, organizar proyectos a largo plazo
+                  considerando los diferentes contextos aplicables caso por
+                  caso.
+                </p>
+              </div>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-start article__list-container-item article__list-container-item--numbered border-bottom border-primary pb-4">
+              <div class="ms-2">
+                <div class="fw-bold mb-2">Planificación</div>
+                <p>
+                  Crear planes de economía circular aplicables a nivel micro en
+                  comunidades controladas, para luego poder utilizar dichos
+                  experimentos en la creación de proyecto a gran escala.
+                </p>
+              </div>
+            </li>
+          </ol>
+          <figure class="my-4 mx-1 mx-xl-5 px-4 px-lg-5">
+            <blockquote class="blockquote pb-2">
+              <p class="h3">
+                "Sabemos lo difícil que es denunciar la necesidad de cambios en
+                nuestros hábitos de producción y consumo sin antes mostrar cómo
+                se aplicarían estos y en qué afectarían a nuestro día a día, ese
+                es nuestro reto."
+              </p>
+            </blockquote>
+            <figcaption class="blockquote-footer mt-1 text-primary">
+              Triana Sastra, fundadora de "EcoRetro".
+            </figcaption>
+          </figure>
+          <div class="article__container-img">
+            <img class="object-fit-cover img-fluid article__image" src="assets/images/front-eco-2.jpg" alt="Imagen de una pegatina en un poste que pone planeta tierra primero"/>
+          </div>
+          <div class="article__text-container my-5 mx-1 mx-xl-5 px-4 px-lg-5">
+            <p>
+              Si quieres estar al tanto de nuestros nuevos cursos y talleres, o
+              crees que podrías colaborar con el proyecto de alguna forma,
+              inscribete en nuestra newsletter para saber cuándo nos podremos
+              encontrar.
+            </p>
+          </div>
+          <button type="button" class="btn btn-primary p-2 mx-auto" data-bs-toggle="modal" data-bs-target="#inscribeModal">
+            Apúntate a la newsletter
+          </button>
+          <div class="modal fade" id="inscribeModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+                <form name="newsletter" netlify>
+                <div class="modal-body">
+                    <div class="mb-3">
+                      <label for="name" class="form-label">Nombre:</label>
+                      <input type="text" class="form-control" id="name" required/>
+                    </div>
+                    <div class="mb-3">
+                      <label for="message" class="col-form-label">Mensaje:</label>
+                      <textarea class="form-control" id="message"></textarea>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-outline-primary" data-bs-dismiss="modal">
+                    Cerrar
+                  </button>
+                  <button type="submit" class="btn btn-primary">
+                    Enviar
+                  </button>
+                </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <include src="./views/footer.html"></include>
+    <script type="module" src="./assets/scripts/main.js"></script>
+    <!-- do not remove this line! -->
+  </body>
+</html>

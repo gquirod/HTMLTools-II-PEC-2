@@ -1,0 +1,46 @@
+/*------------------------------------*\
+  #FOOTER-GRID
+\*------------------------------------*/
+
+.footer-grid {
+  position: relative;
+  color: $primary-color-font;
+
+  &__container {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    gap: 2rem;
+
+    @media (min-width: $maxTabletWidth) {
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: space-between;
+    }
+
+  }
+
+}
+
+
+
+
+
+@supports (container-type: inline-size) {
+
+  .footer-grid {
+    container-type: inline-size;
+    container-name: footer-grid;
+
+    @container footer-grid (min-width: 840px) {
+
+      &__container {
+        flex-flow: row wrap;
+        justify-content: space-between;
+      }
+
+    }
+
+  }
+  
+}

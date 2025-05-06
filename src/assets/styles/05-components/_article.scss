@@ -1,0 +1,149 @@
+/*------------------------------------*\
+  #ARTICLE
+\*------------------------------------*/
+
+.article {
+  position: relative;
+  color: $primary-color-font;
+
+  &__container-img {
+    width: 100%;
+
+    @supports (container-type: inline-size) {
+      container-type: inline-size;
+      container-name: image-container;
+    }
+
+  }
+
+  &__image {
+    object-fit: cover;
+    height: 450px;
+    width: 100%;
+    object-position: top;
+    overflow: hidden;
+
+    @media (min-width: 990px) {
+      height: 600px;
+    }
+
+  }
+
+  &__text-wrapper {
+    display: flex;
+    flex-flow: column nowrap;
+
+    @supports (container-type: inline-size) {
+      container-type: inline-size;
+      container-name: article-grid;
+    }
+
+  }
+
+  &__text-container {
+    display: flex;
+    flex-flow: column;
+  }
+
+  &__text-container--two-column {
+    flex: 1 1 100%;
+
+    @media (min-width: $maxTabletWidth) {
+      flex: 1 1 calc(55% - 0.5rem);
+    }
+
+  }
+
+  &__text-container--two-column:first-child {
+    font-size: 1.5rem;
+    font-family: $font-family-comfortaa;
+
+    @media (min-width: $maxTabletWidth) {
+      flex: 1 1 calc(45% - 0.5rem);
+    }
+
+  }
+
+  /* stylelint-disable */
+  &__text-container:has(.article__text-container--two-column) {
+    flex-flow: row wrap;
+    gap: 1rem;
+  }
+  /* stylelint-enable */
+
+  &__list-container {
+    list-style-type: none;
+    counter-reset: section;
+    margin-inline: 6rem;
+    gap: 0.25rem;
+  }
+
+  &__list-container-item {
+    color: $primary-color-font;
+    padding-left: 2rem;
+  }
+
+  &__list-container-item--numbered::before {
+    content: counters(section, ".");
+    counter-increment: section;
+    position: absolute;
+    left: 0;
+    line-height: 1.6rem;
+    width: 30px;
+    height: 30px;
+    border: 2px solid $primary-color-faded;
+    text-align: center;
+    border-radius: 50%;
+  }
+  
+  /* stylelint-disable */
+  :is(.article__text-wrapper) :is(.article__container-img) .article__image {
+    object-fit: cover;
+    height: 400px;
+    object-position: center;
+    overflow: hidden;
+  }
+  /* stylelint-enable */
+
+}
+
+
+
+
+
+@supports (container-type: inline-size) {
+
+  @container article-grid (min-width: 860px) {
+
+    .article {
+
+      &__text-container--two-column {
+        flex: 1 1 calc(55% - 0.5rem);
+      }
+
+      &__text-container--two-column:first-child {
+        flex: 1 1 calc(45% - 0.5rem);
+      }
+
+      &__image {
+        height: 200px;
+        object-position: top;
+      }
+
+    }
+
+  }
+
+  @container image-container (min-width: 990px) {
+
+    .article {
+
+      &__image {
+        height: 600px;
+      }
+
+    }
+
+  }
+
+}

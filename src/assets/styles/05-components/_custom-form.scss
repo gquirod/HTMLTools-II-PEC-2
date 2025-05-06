@@ -1,0 +1,105 @@
+/*------------------------------------*\
+  #CUSTOM-FORM
+\*------------------------------------*/
+
+.custom-form {
+  padding: 5dvh;
+
+  &__container {
+    @include boxShadowStyle($color: $primary-color-faded);
+    margin: 0 auto;
+    width: 80dvw;
+    padding: 4dvh 8dvw;
+    border: 3pt solid transparent;
+    border-image: linear-gradient(
+        to bottom right,
+        lch(80% 50 67),
+        lch(80% 50 312),
+        lch(0% 0 0)
+      )1;
+      
+  }
+
+  &__legend {
+    padding: 4dvh;
+    font-size: 2rem;
+    font-family: $font-family-comfortaa;
+    font-weight: 700;
+    text-align: center;
+  }
+
+  &__control {
+    height: 12dvh;
+    padding-inline: 1dvw;
+  }
+
+  &__control--check {
+    padding-inline: 4dvw;
+    padding-bottom: 3dvh;
+  }
+
+  &__button {
+    padding-top: 1dvh;
+    padding-bottom: 1dvh;
+    padding-inline: 1.5dvw;
+    margin: 4dvw;
+    font-weight: 600;
+    background: hsl(from #7ca7f5 h calc(s + 0%) calc(l + 20%));
+    color: hsl(from #000000 h s l);
+  }
+
+  &__button:hover {
+    background: hsl(from #7ca7f5 h s l);
+    color: hsl(from #000000 h s calc(l + 100%));
+  }
+
+}
+
+
+
+
+
+@supports (container-type: inline-size) {
+
+  .custom-form {
+    container-type: inline-size;
+    container-name: form-grid;
+
+    @container form-grid (min-width: 800px) {
+
+      &__container {
+        width: 60cqw;
+        padding: 2cqh 5cqw;
+      }
+
+    }
+
+    @container form-grid (min-width: 1200px) {
+
+      &__container {
+        width: 45cqw;
+        padding: 3cqh 5cqw;
+      }
+
+      &__legend {
+        padding: 2cqw;
+      }
+
+      &__control {
+        padding-inline: 2cqw;
+      }
+
+      &__control--check {
+        padding-inline: 4cqw;
+      }
+
+      &__button {
+        padding: 1.5cqh 1cqw;
+        margin: 1cqw;
+      }
+
+    }
+
+  }
+
+}

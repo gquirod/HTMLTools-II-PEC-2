@@ -1,27 +1,40 @@
 <!DOCTYPE html>
-
 <html>
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
-    <link rel="stylesheet" type="text/css" href="./assets/styles/main.scss"><!-- do not remove this line! -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" type="text/css" href="./assets/styles/main.scss" />
+    <!-- do not remove this line! -->
     <title>UOC Boilerplate</title>
   </head>
   <body>
-    <div class="uoc-container">
-      <picture>
-        <source srcset="./assets/images/logo.png?as=webp&width=350" type="image/webp" />
-        <img src="./assets/images/logo.png?width=350" alt="Universitat Oberta de Catalunya" class="uoc-logo" />
-      </picture>
-      <h1 class="uoc-title">Hello, UOC!</h1>
-      <p>
-        This is a starter template for the Advanced HTML and CSS Tools courses
-        from the Master's Program in Multimedia Applications and the Master's
-        Program in Web App and Website Development at the Universitat Oberta de
-        Catalunya.
-      </p>
+    <include src="./views/header.html"></include>
+    <div class="main-wrapper">
+      <div class="main-page">
+        <div class="main-page__container-img">
+          <img
+            class="main-page__image object-fit-cover w-100 h-100"
+            src="assets/images/front-meeting.jpg"
+            alt="Imagen de una ponencia con publico"
+          />
+        </div>
+        <h1 class="main-page__title p-3 mb-0 fw-bold">Reto-Eco</h1>
+        <p class="main-page__description p-3 py-2">
+          Cuatro días de charlas y talleres de especialistas en el sector sobre
+          nuevos horizontes en la economía circular, para profesionales e
+          interesados en este campo.
+        </p>
+        <p class="main-page__info-date p-3 m-0 text-center fw-bold">
+          AGOSTO 6 - 9
+        </p>
+        <p class="main-page__caption p-4 mb-0">
+          "una posibilidad de aprender de la mano de profesionales que nos
+          acercan de una forma integral a soñar con mejores futuros"
+        </p>
+      </div>
     </div>
     <include src="./views/footer.html"></include>
-    <script type="module" src="./assets/scripts/main.js"></script><!-- do not remove this line! -->
+    <script type="module" src="./assets/scripts/main.js"></script>
+    <!-- do not remove this line! -->
   </body>
 </html>
